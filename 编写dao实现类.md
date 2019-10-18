@@ -1,0 +1,73 @@
+# 编写dao实现类
+
+Mybatis支持自己编写dao实现类, 这是一种作死的做法, 不推荐使用.
+
+在上一页的示例中修改如下:
+
+1. 在cn.com.dao下添加UserDaoImpl类:
+
+```java
+// -- cn.com.dao.UserDaoImpl.java --
+package cn.com.dao;
+
+import cn.com.daliu.User;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import java.util.List;
+
+public class UserDaoImpl implements IUserDao {
+    private SqlSessionFactory factory;
+    public UserDaoImpl(SqlSessionFactory factory) {
+        this.factory = factory;
+    }
+
+    @Override
+    public List<User> findAll() {
+        SqlSession session = this.factory.openSession();
+        List<User> users = session.selectList("cn.com.dao.IUserDao.findAll");
+        session.close();
+        return users;
+    }
+}
+```
+
+2. 修改用于测试的主类文件
+
+```java
+package cn.com.test;
+
+import cn.com.daliu.User;
+import cn.com.dao.IUserDao;
+import cn.com.dao.UserDaoImpl;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+public class Test {
+    public static void main(String[] args) throws IOException {
+        // 1. 读取配置文件SqlMapConfig.xml
+        InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
+
+        // 2. 创建SqlSessionFactory工厂
+        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory factory = builder.build(in);
+
+        // 3. 使用工厂创建对象
+        IUserDao userDao = new UserDaoImpl(factory);
+
+        // 5. 使用代理对象执行方法
+        List<User> users = userDao.findAll();
+        System.out.println("====== print all users: =========");
+        for (User user : users) {
+            System.out.println(user);
+        }
+        System.out.println("=================================");
+        in.close();
+    }
+}
+```
