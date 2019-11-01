@@ -25,6 +25,15 @@ public class UserDaoImpl implements IUserDao {
     @Override
     public List<User> findAll() {
         SqlSession session = this.factory.openSession();
+        // 实际上这里取的是命名空间+类名+方法
+        // resources/cn/com/dao/IUserDao.xml下配置有: 
+        /**
+        <mapper namespace="cn.com.dao.IUserDao">
+            <select id="findAll" resultType="cn.com.daliu.User">
+                select * from user;
+            </select>
+        </mapper>
+        */
         List<User> users = session.selectList("cn.com.dao.IUserDao.findAll");
         session.close();
         return users;
