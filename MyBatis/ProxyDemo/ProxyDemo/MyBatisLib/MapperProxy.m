@@ -10,21 +10,16 @@
 
 @interface MapperProxy ()
 
-@property (nonatomic, strong) NSDictionary<NSString *, Mapper *> *mappers;
-
 @end
 
 @implementation MapperProxy
 
-- (instancetype)initWithMappers:(NSDictionary<NSString *, Mapper *> *)mappers {
-    if (self = [super init]) {
-        self.mappers = mappers;
-    }
-    return self;
-}
-
+// getPerson:(float)score
 - (void)invoke {
     NSLog(@"Here invoke");
+    
 }
+
+// From org.apache.ibatis.jdbc.SqlRunner.java
 
 @end

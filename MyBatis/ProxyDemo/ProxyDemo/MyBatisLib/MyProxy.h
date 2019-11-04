@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyProxy : NSProxy
 
-+ (id)createProxyInstance:(Protocol *)protocol handler:(id<InvocationHandler>)handler;
++ (id)createProxyInstance:(id<InvocationHandler>)handler;
 
 @end
 

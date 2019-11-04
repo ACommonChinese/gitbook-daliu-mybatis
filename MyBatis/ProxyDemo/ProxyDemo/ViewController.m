@@ -39,8 +39,8 @@
     SqlSessionFactoryBuilder *builder = [[SqlSessionFactoryBuilder alloc] init];
     NSString *configPath = [[NSBundle mainBundle] pathForResource:@"SqlMapConfig" ofType:@"xml"];
     id<SqlSessionFactory> factory = [builder build:configPath];
-    id<SqlSession> session = [factory openSession];
-    id<IUserDao> userDao = [session getMapper:@protocol(IUserDao)];
+    id<SqlSession> session = [factory openSession]; // sqlite_open -> DefaultSqlSession
+    id<IUserDao> userDao = [session getMapper:@protocol(IUserDao)]; // MapperProxy对象
     NSArray<User *> *users = [userDao findAll];
     for (User *user in users) {
         [user printInfo];

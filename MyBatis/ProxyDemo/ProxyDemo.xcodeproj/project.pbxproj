@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB7A4DD6236FC47D00F28C92 /* SqlRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7A4DD5236FC47D00F28C92 /* SqlRunner.m */; };
 		DA091F39236D4D9300862A07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F38236D4D9300862A07 /* AppDelegate.m */; };
 		DA091F3C236D4D9300862A07 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F3B236D4D9300862A07 /* SceneDelegate.m */; };
 		DA091F3F236D4D9300862A07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F3E236D4D9300862A07 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB7A4DD4236FC47D00F28C92 /* SqlRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqlRunner.h; sourceTree = "<group>"; };
+		AB7A4DD5236FC47D00F28C92 /* SqlRunner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqlRunner.m; sourceTree = "<group>"; };
 		DA091F34236D4D9300862A07 /* ProxyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA091F37236D4D9300862A07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA091F38236D4D9300862A07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				DA091F7B236EDF3800862A07 /* XMLConfigBuilder.m */,
 				DA091F75236EDE5100862A07 /* ONOXMLDocument.h */,
 				DA091F76236EDE5100862A07 /* ONOXMLDocument.m */,
+				AB7A4DD4236FC47D00F28C92 /* SqlRunner.h */,
+				AB7A4DD5236FC47D00F28C92 /* SqlRunner.m */,
 			);
 			path = MyBatisLib;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				DA091F77236EDE5100862A07 /* ONOXMLDocument.m in Sources */,
 				DA091F39236D4D9300862A07 /* AppDelegate.m in Sources */,
 				DA091F8D236F116E00862A07 /* MapperProxy.m in Sources */,
+				AB7A4DD6236FC47D00F28C92 /* SqlRunner.m in Sources */,
 				DA091F4A236D4D9600862A07 /* main.m in Sources */,
 				DA091F74236EDA8000862A07 /* Mapper.m in Sources */,
 				DA091F68236ED40F00862A07 /* DefaultSqlSessionFactory.m in Sources */,

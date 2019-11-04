@@ -1,20 +1,17 @@
 //
-//  IUserDao.h
+//  SqlRunner.h
 //  ProxyDemo
 //
-//  Created by liuweizhen on 2019/11/3.
+//  Created by banma-1118 on 2019/11/4.
 //  Copyright © 2019 liuxing8807@126.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "User.h"
+#import <sqlite3.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol IUserDao <NSObject>
-
-- (NSArray<User *> *)findAll;
-- (User *)getUser:(float)score;
+@interface SqlRunner : NSObject
 
 @end
 

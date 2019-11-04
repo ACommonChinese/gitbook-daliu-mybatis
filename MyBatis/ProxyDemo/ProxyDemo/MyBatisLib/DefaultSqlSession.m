@@ -46,7 +46,10 @@
 }
 
 - (id)getMapper:(Protocol *)protocol {
-    return [MyProxy createProxyInstance:protocol handler:[[MapperProxy alloc] initWithMappers:self.config.mappers]];
+    MapperProxy *proxy = [[MapperProxy alloc] init];
+    proxy.protocol = protocol;
+    proxy.mappers = self.config.mappers;
+    return [MyProxy createProxyInstance:[[MapperProxy alloc] init]];
 }
 
 - (void)close {

@@ -30,6 +30,7 @@
 }
 
 // 2.有了方法签名之后就会调用方法实现
+// 转发到InvocationHandler的invoke方法上
 - (void)forwardInvocation:(NSInvocation *)invocation {
     NSLog(@"%@", invocation);
     // NSMethodSignature *signature = [invocation methodSignature];
@@ -39,7 +40,7 @@
     [invocation invoke];
 }
 
-+ (id)createProxyInstance:(Protocol *)protocol handler:(id<InvocationHandler>)handler {
++ (id)createProxyInstance:(id<InvocationHandler>)handler {
     MyProxy *proxy = [MyProxy alloc];
     proxy.invocationHandler = handler;
     return proxy;

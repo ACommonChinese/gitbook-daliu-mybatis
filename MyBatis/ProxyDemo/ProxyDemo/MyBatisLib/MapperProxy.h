@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MapperProxy : NSObject <InvocationHandler>
 
-- (instancetype)initWithMappers:(NSDictionary<NSString *, Mapper *> *)mappers;
+@property (nonatomic, strong) Protocol *protocol;
+@property (nonatomic, strong) NSDictionary<NSString *, Mapper *> *mappers;
 
 @end
 
