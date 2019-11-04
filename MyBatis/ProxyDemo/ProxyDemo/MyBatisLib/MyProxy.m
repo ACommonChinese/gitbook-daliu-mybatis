@@ -25,18 +25,28 @@
 
 // 1.查询该方法的方法签名
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    NSLog(@"%@", NSStringFromSelector(sel)); // selectAll
-    return [(NSObject *)self.invocationHandler methodSignatureForSelector:@selector(invoke)];
+    NSLog(@"%@", NSStringFromSelector(sel)); // getUser:
+    return [(NSObject *)self.invocationHandler methodSignatureForSelector:@selector(invoke:)];
 }
 
 // 2.有了方法签名之后就会调用方法实现
 // 转发到InvocationHandler的invoke方法上
 - (void)forwardInvocation:(NSInvocation *)invocation {
-    NSLog(@"%@", invocation);
-    // NSMethodSignature *signature = [invocation methodSignature];
-    // NSUInteger argumentCount = [signature numberOfArguments];
+    // https://www.jianshu.com/p/20c441f19126
+    // https://mazyod.com/blog/2014/03/10/nsproxy-with-uikit/
+    
+    NSLog(@"selector: %@", NSStringFromSelector(invocation.selector)); // getUser:
+    NSLog(@"target: %@", invocation.target); // MyProxy
+    NSMethodSignature *signature = [invocation methodSignature];
+    NSLog(@"methodSignature: %@", signature);
+//    NSUInteger argumentCount = [signature numberOfArguments];
+//    NSLog(@"参数个数: %lu", argumentCount); // 参数至少2个,一个self一个sel
+    if (![self.invocationHandler respondsToSelector:invocation.selector]) {
+        return;
+    }
+    
     [invocation setTarget:self.invocationHandler]; // 对象
-    [invocation setSelector:@selector(invoke)]; // 方法
+    [invocation setSelector:@selector(invoke:)]; // 方法
     [invocation invoke];
 }
 

@@ -23,12 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    @Override
-//       public <T> T getMapper(Class<T> daoInterfaceClass) {
-//           return (T) Proxy.newProxyInstance(daoInterfaceClass.getClassLoader(),
-//                   new Class[]{daoInterfaceClass},new MapperProxy(cfg.getMappers(),connection));
-//       }
+
 
 }
 
@@ -38,14 +33,15 @@
 - (IBAction)btnClick:(id)sender {
     SqlSessionFactoryBuilder *builder = [[SqlSessionFactoryBuilder alloc] init];
     NSString *configPath = [[NSBundle mainBundle] pathForResource:@"SqlMapConfig" ofType:@"xml"];
-    id<SqlSessionFactory> factory = [builder build:configPath];
+    id<SqlSessionFactory> factory = [builder build:configPath]; // DefaultSqlSessionFactory
     id<SqlSession> session = [factory openSession]; // sqlite_open -> DefaultSqlSession
     id<IUserDao> userDao = [session getMapper:@protocol(IUserDao)]; // MapperProxy对象
-    NSArray<User *> *users = [userDao findAll];
-    for (User *user in users) {
-        [user printInfo];
-    }
-    
+    // NSArray<User *> *users = [userDao findAll];
+    User *user = [userDao getUser:100.0];
+//    for (User *user in users) {
+//        [user printInfo];
+//    }
+    NSLog(@"OK");
 //    id<DogDao> daoDog = [MyProxy createProxyInstance:@protocol(DogDao) handler:[[MyInvocationHandler alloc] init]];
 //    [daoDog selectAll];
 }

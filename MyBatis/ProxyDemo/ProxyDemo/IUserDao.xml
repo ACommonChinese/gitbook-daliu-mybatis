@@ -5,7 +5,7 @@
 <select id="findAll" resultType="User">
     select * from user
 </select>
-<select id="getPerson:" resultType="User">
+<select id="getUser:" resultType="User">
     select * from user where score > ?
 </select>
 </mapper>

@@ -18,7 +18,6 @@
 		DA091F52236D4F5300862A07 /* MyProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F51236D4F5300862A07 /* MyProxy.m */; };
 		DA091F55236D5CD900862A07 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F54236D5CD900862A07 /* Dog.m */; };
 		DA091F58236D5D0600862A07 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F57236D5D0600862A07 /* Cat.m */; };
-		DA091F5D236D85E500862A07 /* MyInvocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F5C236D85E500862A07 /* MyInvocationHandler.m */; };
 		DA091F62236ED12300862A07 /* SqlSessionFactoryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F61236ED12300862A07 /* SqlSessionFactoryBuilder.m */; };
 		DA091F68236ED40F00862A07 /* DefaultSqlSessionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F67236ED40F00862A07 /* DefaultSqlSessionFactory.m */; };
 		DA091F6B236ED4D100862A07 /* DefaultSqlSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F6A236ED4D100862A07 /* DefaultSqlSession.m */; };
@@ -58,8 +57,6 @@
 		DA091F57236D5D0600862A07 /* Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
 		DA091F59236D5FEF00862A07 /* DogDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogDao.h; sourceTree = "<group>"; };
 		DA091F5A236D85D100862A07 /* InvocationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvocationHandler.h; sourceTree = "<group>"; };
-		DA091F5B236D85E500862A07 /* MyInvocationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyInvocationHandler.h; sourceTree = "<group>"; };
-		DA091F5C236D85E500862A07 /* MyInvocationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyInvocationHandler.m; sourceTree = "<group>"; };
 		DA091F5F236ECE8400862A07 /* SqlSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqlSession.h; sourceTree = "<group>"; };
 		DA091F60236ED12300862A07 /* SqlSessionFactoryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqlSessionFactoryBuilder.h; sourceTree = "<group>"; };
 		DA091F61236ED12300862A07 /* SqlSessionFactoryBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqlSessionFactoryBuilder.m; sourceTree = "<group>"; };
@@ -131,10 +128,10 @@
 				DA091F3E236D4D9300862A07 /* ViewController.m */,
 				DA091F40236D4D9300862A07 /* Main.storyboard */,
 				DA091F7D236EE62B00862A07 /* SqlMapConfig.xml */,
-				DA091F7F236EF51B00862A07 /* IUserDao.xml */,
 				DA091F84236F042E00862A07 /* User.h */,
 				DA091F85236F042E00862A07 /* User.m */,
 				DA091F8A236F0D6500862A07 /* IUserDao.h */,
+				DA091F7F236EF51B00862A07 /* IUserDao.xml */,
 				DA091F5E236ECE5400862A07 /* MyBatisLib */,
 				DA091F53236D5CD900862A07 /* Dog.h */,
 				DA091F54236D5CD900862A07 /* Dog.m */,
@@ -155,8 +152,6 @@
 				DA091F50236D4F5300862A07 /* MyProxy.h */,
 				DA091F51236D4F5300862A07 /* MyProxy.m */,
 				DA091F5A236D85D100862A07 /* InvocationHandler.h */,
-				DA091F5B236D85E500862A07 /* MyInvocationHandler.h */,
-				DA091F5C236D85E500862A07 /* MyInvocationHandler.m */,
 				DA091F8B236F116E00862A07 /* MapperProxy.h */,
 				DA091F8C236F116E00862A07 /* MapperProxy.m */,
 				DA091F5F236ECE8400862A07 /* SqlSession.h */,
@@ -279,7 +274,6 @@
 				DA091F4A236D4D9600862A07 /* main.m in Sources */,
 				DA091F74236EDA8000862A07 /* Mapper.m in Sources */,
 				DA091F68236ED40F00862A07 /* DefaultSqlSessionFactory.m in Sources */,
-				DA091F5D236D85E500862A07 /* MyInvocationHandler.m in Sources */,
 				DA091F3C236D4D9300862A07 /* SceneDelegate.m in Sources */,
 				DA091F89236F0A3500862A07 /* SqlError.m in Sources */,
 				DA091F6E236ED54800862A07 /* Configuration.m in Sources */,

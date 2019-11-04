@@ -49,7 +49,7 @@
     MapperProxy *proxy = [[MapperProxy alloc] init];
     proxy.protocol = protocol;
     proxy.mappers = self.config.mappers;
-    return [MyProxy createProxyInstance:[[MapperProxy alloc] init]];
+    return [MyProxy createProxyInstance:proxy];
 }
 
 - (void)close {

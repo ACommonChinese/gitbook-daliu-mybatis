@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // InvocationHandler.java
 // public Object invoke(Object proxy, Method method, Object[] args) throws Throwable;
-- (void)invoke;
+- (void)invoke:(SEL)selector;
 
 @end
 

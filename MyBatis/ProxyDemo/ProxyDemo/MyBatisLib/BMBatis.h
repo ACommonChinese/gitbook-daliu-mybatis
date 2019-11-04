@@ -11,7 +11,6 @@
 
 #import "MyProxy.h"
 #import "InvocationHandler.h"
-#import "MyInvocationHandler.h"
 #import "SqlSessionFactoryBuilder.h"
 #import "SqlSessionFactory.h"
 #import "Mapper.h"

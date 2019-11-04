@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface User : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, assign) float score;
+
 - (void)printInfo;
 
 @end

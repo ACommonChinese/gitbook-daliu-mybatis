@@ -17,7 +17,7 @@
 // getPerson:(float)score
 - (void)invoke {
     NSLog(@"Here invoke");
-    
+    // NSString *methodName = self.protocol
 }
 
 // From org.apache.ibatis.jdbc.SqlRunner.java

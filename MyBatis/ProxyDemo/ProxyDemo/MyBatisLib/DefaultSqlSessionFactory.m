@@ -25,7 +25,7 @@
 }
 
 - (id<SqlSession>)openSession {
-    return [[DefaultSqlSession alloc] init];
+    return [[DefaultSqlSession alloc] initWithConfig:self.config];
 }
 
 @end
