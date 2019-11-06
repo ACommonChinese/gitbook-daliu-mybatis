@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB7A4DD6236FC47D00F28C92 /* SqlRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7A4DD5236FC47D00F28C92 /* SqlRunner.m */; };
+		AB8F669F2372E0C900A4A269 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F669E2372E0C900A4A269 /* Field.m */; };
+		AB8F66A22372E19300A4A269 /* BMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F66A02372E19300A4A269 /* BMProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA091F39236D4D9300862A07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F38236D4D9300862A07 /* AppDelegate.m */; };
 		DA091F3C236D4D9300862A07 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F3B236D4D9300862A07 /* SceneDelegate.m */; };
 		DA091F3F236D4D9300862A07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F3E236D4D9300862A07 /* ViewController.m */; };
@@ -30,13 +32,16 @@
 		DA091F7E236EE62B00862A07 /* SqlMapConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA091F7D236EE62B00862A07 /* SqlMapConfig.xml */; };
 		DA091F80236EF51B00862A07 /* IUserDao.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA091F7F236EF51B00862A07 /* IUserDao.xml */; };
 		DA091F86236F042E00862A07 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F85236F042E00862A07 /* User.m */; };
-		DA091F89236F0A3500862A07 /* SqlError.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F88236F0A3500862A07 /* SqlError.m */; };
 		DA091F8D236F116E00862A07 /* MapperProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA091F8C236F116E00862A07 /* MapperProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB7A4DD4236FC47D00F28C92 /* SqlRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqlRunner.h; sourceTree = "<group>"; };
 		AB7A4DD5236FC47D00F28C92 /* SqlRunner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqlRunner.m; sourceTree = "<group>"; };
+		AB8F669D2372E0C900A4A269 /* Field.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		AB8F669E2372E0C900A4A269 /* Field.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
+		AB8F66A02372E19300A4A269 /* BMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMProxy.m; path = ../../../Proxy_good2/Proxy/BMProxy.m; sourceTree = "<group>"; };
+		AB8F66A12372E19300A4A269 /* BMProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMProxy.h; path = ../../../Proxy_good2/Proxy/BMProxy.h; sourceTree = "<group>"; };
 		DA091F34236D4D9300862A07 /* ProxyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA091F37236D4D9300862A07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA091F38236D4D9300862A07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,8 +85,6 @@
 		DA091F7F236EF51B00862A07 /* IUserDao.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = IUserDao.xml; sourceTree = "<group>"; };
 		DA091F84236F042E00862A07 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		DA091F85236F042E00862A07 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		DA091F87236F0A3500862A07 /* SqlError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqlError.h; sourceTree = "<group>"; };
-		DA091F88236F0A3500862A07 /* SqlError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqlError.m; sourceTree = "<group>"; };
 		DA091F8A236F0D6500862A07 /* IUserDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUserDao.h; sourceTree = "<group>"; };
 		DA091F8B236F116E00862A07 /* MapperProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapperProxy.h; sourceTree = "<group>"; };
 		DA091F8C236F116E00862A07 /* MapperProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapperProxy.m; sourceTree = "<group>"; };
@@ -149,16 +152,18 @@
 		DA091F5E236ECE5400862A07 /* MyBatisLib */ = {
 			isa = PBXGroup;
 			children = (
+				AB8F66A12372E19300A4A269 /* BMProxy.h */,
+				AB8F66A02372E19300A4A269 /* BMProxy.m */,
 				DA091F50236D4F5300862A07 /* MyProxy.h */,
 				DA091F51236D4F5300862A07 /* MyProxy.m */,
 				DA091F5A236D85D100862A07 /* InvocationHandler.h */,
 				DA091F8B236F116E00862A07 /* MapperProxy.h */,
 				DA091F8C236F116E00862A07 /* MapperProxy.m */,
+				AB8F669D2372E0C900A4A269 /* Field.h */,
+				AB8F669E2372E0C900A4A269 /* Field.m */,
 				DA091F5F236ECE8400862A07 /* SqlSession.h */,
 				DA091F69236ED4D100862A07 /* DefaultSqlSession.h */,
 				DA091F6A236ED4D100862A07 /* DefaultSqlSession.m */,
-				DA091F87236F0A3500862A07 /* SqlError.h */,
-				DA091F88236F0A3500862A07 /* SqlError.m */,
 				DA091F60236ED12300862A07 /* SqlSessionFactoryBuilder.h */,
 				DA091F61236ED12300862A07 /* SqlSessionFactoryBuilder.m */,
 				DA091F63236ED2B900862A07 /* SqlSessionFactory.h */,
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8F66A22372E19300A4A269 /* BMProxy.m in Sources */,
 				DA091F6B236ED4D100862A07 /* DefaultSqlSession.m in Sources */,
 				DA091F55236D5CD900862A07 /* Dog.m in Sources */,
 				DA091F3F236D4D9300862A07 /* ViewController.m in Sources */,
@@ -272,10 +278,10 @@
 				DA091F8D236F116E00862A07 /* MapperProxy.m in Sources */,
 				AB7A4DD6236FC47D00F28C92 /* SqlRunner.m in Sources */,
 				DA091F4A236D4D9600862A07 /* main.m in Sources */,
+				AB8F669F2372E0C900A4A269 /* Field.m in Sources */,
 				DA091F74236EDA8000862A07 /* Mapper.m in Sources */,
 				DA091F68236ED40F00862A07 /* DefaultSqlSessionFactory.m in Sources */,
 				DA091F3C236D4D9300862A07 /* SceneDelegate.m in Sources */,
-				DA091F89236F0A3500862A07 /* SqlError.m in Sources */,
 				DA091F6E236ED54800862A07 /* Configuration.m in Sources */,
 				DA091F62236ED12300862A07 /* SqlSessionFactoryBuilder.m in Sources */,
 			);
@@ -417,7 +423,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 智行 斑马 (M8JC6WJ6Z8)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E97K6G9K4T;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ProxyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "---.ProxyDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
 				SYSTEM_HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -435,7 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 智行 斑马 (M8JC6WJ6Z8)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E97K6G9K4T;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ProxyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,6 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "---.ProxyDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
 				SYSTEM_HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -7,19 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Field.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol InvocationHandler <NSObject>
 
-// public Object invoke(Object proxy, Method method, Object[] args)
-//       throws Throwable;
-
-//- (void)invoke:(NSObject *)proxy selector:(SEL)selector args:(NSArray *)args;
-
 // InvocationHandler.java
 // public Object invoke(Object proxy, Method method, Object[] args) throws Throwable;
-- (void)invoke:(SEL)selector;
+- (void)invoke:(SEL)method args:(NSArray<Field *> *)args;
 
 @end
 

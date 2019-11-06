@@ -1,8 +1,8 @@
 //
-//  SqlSession.h
+//  Field.h
 //  ProxyDemo
 //
-//  Created by liuweizhen on 2019/11/3.
+//  Created by liuxing8807@126.com on 2019/11/6.
 //  Copyright © 2019 liuxing8807@126.com. All rights reserved.
 //
 
@@ -10,14 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol SqlSession <NSObject>
-
-- (id)getMapper:(Protocol *)protocol;
-
-/**
- 释放资源
- */
-- (void)close;
+@interface Field : NSObject
 
 @end
 

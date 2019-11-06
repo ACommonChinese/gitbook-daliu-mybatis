@@ -11,7 +11,6 @@
 //               new Class[]{daoInterfaceClass},new MapperProxy(cfg.getMappers(),connection));
 //   }
 
-
 #import "MyProxy.h"
 #import <objc/runtime.h>
 
@@ -34,11 +33,11 @@
 - (void)forwardInvocation:(NSInvocation *)invocation {
     // https://www.jianshu.com/p/20c441f19126
     // https://mazyod.com/blog/2014/03/10/nsproxy-with-uikit/
-    
     NSLog(@"selector: %@", NSStringFromSelector(invocation.selector)); // getUser:
     NSLog(@"target: %@", invocation.target); // MyProxy
     NSMethodSignature *signature = [invocation methodSignature];
     NSLog(@"methodSignature: %@", signature);
+
 //    NSUInteger argumentCount = [signature numberOfArguments];
 //    NSLog(@"参数个数: %lu", argumentCount); // 参数至少2个,一个self一个sel
     if (![self.invocationHandler respondsToSelector:invocation.selector]) {
